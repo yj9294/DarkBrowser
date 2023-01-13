@@ -116,7 +116,7 @@ extension SettingView {
     
     func rateAction() {
         store.dispatch(.settingShow(false))
-        if let url = URL(string: "https://itunes.apple.com/cn/app/id") {
+        if let url = URL(string: "https://itunes.apple.com/cn/app/id1663722537") {
             openURL(url)
         }
     }

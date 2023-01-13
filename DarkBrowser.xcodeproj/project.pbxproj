@@ -41,7 +41,7 @@
 		C7EC0325295188220074DD55 /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = C7EC0324295188220074DD55 /* FacebookAEM */; };
 		C7EC0327295188220074DD55 /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = C7EC0326295188220074DD55 /* FacebookBasics */; };
 		C7EC0329295188220074DD55 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = C7EC0328295188220074DD55 /* FacebookCore */; };
-		C7EC032C295299FE0074DD55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7EC032B295299FE0074DD55 /* GoogleService-Info.plist */; };
+		C7F8E8C82970F79600B2EEC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7F8E8C72970F79600B2EEC0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,7 +74,7 @@
 		C7EC031829517D6E0074DD55 /* CleanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanView.swift; sourceTree = "<group>"; };
 		C7EC031A295186F20074DD55 /* FirebaseCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCommand.swift; sourceTree = "<group>"; };
 		C7EC032A2952994E0074DD55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C7EC032B295299FE0074DD55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C7F8E8C72970F79600B2EEC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +154,8 @@
 				C71578E5294C11F400C5487F /* DataFlow */,
 				C722A81E294C0F7C00BFBC46 /* DarkBrowserApp.swift */,
 				C722A820294C0F7C00BFBC46 /* ContentView.swift */,
-				C7EC032B295299FE0074DD55 /* GoogleService-Info.plist */,
 				C71578F3294C230900C5487F /* Helper.swift */,
+				C7F8E8C72970F79600B2EEC0 /* GoogleService-Info.plist */,
 				C719DD61295580D70003C7E7 /* admob.json */,
 				C722A822294C0F7E00BFBC46 /* Assets.xcassets */,
 				C722A824294C0F7E00BFBC46 /* Preview Content */,
@@ -244,9 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C722A826294C0F7E00BFBC46 /* Preview Assets.xcassets in Resources */,
+				C7F8E8C82970F79600B2EEC0 /* GoogleService-Info.plist in Resources */,
 				C719DD62295580D70003C7E7 /* admob.json in Resources */,
 				C722A823294C0F7E00BFBC46 /* Assets.xcassets in Resources */,
-				C7EC032C295299FE0074DD55 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

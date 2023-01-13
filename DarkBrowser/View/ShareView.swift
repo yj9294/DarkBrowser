@@ -21,7 +21,7 @@ struct ShareView: UIViewControllerRepresentable {
         if let u = home.item.webView.url?.absoluteString {
             url = u
         } else {
-            url = "https://itunes.apple.com/cn/app/id"
+            url = "https://itunes.apple.com/cn/app/id1663722537"
         }
         
         let controller = UIActivityViewController(

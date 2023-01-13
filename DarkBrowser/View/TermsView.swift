@@ -26,16 +26,15 @@ struct TermsView: View {
             }
             ScrollView{
                 Text("""
-Please read these Terms of Use in detail
+It is recommended that you read these Terms of Use in detail
 Use of the application
-You accept that you may not use this application for illegal purposes
-You accept that we may discontinue the service of the application at any time without prior notice to you
-You accept using our application in accordance with the terms of this page, if you reject the terms of this page, please do not use our services
+You accept that we are not responsible for the third-party content you visit
+You accept that we can terminate our service at any time without informing you in advance
+You accept the use of our application to the extent permitted by law
 Update
-We may update our Terms of Use from time to time. We recommend that you review these Terms of Use periodically for changes.
+We will update these terms of use from time to time. We suggest you follow this page to learn about the updated status and content
 Contact us
-If you have any questions about these Terms of Use, please contact us
-viab123456@outlook.com
+Contact us:darkbrowser123456@gmail.com
 """).foregroundColor(.white)
             }
             .padding(.all)
