@@ -26,14 +26,16 @@ struct TermsView: View {
             }
             ScrollView{
                 Text("""
-The following terms and conditions (the “Terms”) govern your use of the VPN services we provide (the “Service”) and their associated website domains (the “Site”). These Terms constitute a legally binding agreement (the “Agreement”) between you and Tap VPN. (the “Tap VPN”).
-
-Activation of your account constitutes your agreement to be bound by the Terms and a representation that you are at least eighteen (18) years of age, and that the registration information you have provided is accurate and complete.
-
-Tap VPN may update the Terms from time to time without notice. Any changes in the Terms will be incorporated into a revised Agreement that we will post on the Site. Unless otherwise specified, such changes shall be effective when they are posted. If we make material changes to these Terms, we will aim to notify you via email or when you log in at our Site.
-
-By using Tap VPN
-You agree to comply with all applicable laws and regulations in connection with your use of this service.regulations in connection with your use of this service.
+Please read these Terms of Use in detail
+Use of the application
+You accept that you may not use this application for illegal purposes
+You accept that we may discontinue the service of the application at any time without prior notice to you
+You accept using our application in accordance with the terms of this page, if you reject the terms of this page, please do not use our services
+Update
+We may update our Terms of Use from time to time. We recommend that you review these Terms of Use periodically for changes.
+Contact us
+If you have any questions about these Terms of Use, please contact us
+viab123456@outlook.com
 """).foregroundColor(.white)
             }
             .padding(.all)
