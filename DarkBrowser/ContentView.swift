@@ -26,6 +26,11 @@ struct ContentView: View {
                     HomeView()
                         .onAppear{
                             store.dispatch(.loE(.homeShow))
+                            store.dispatch(.adLoad(.native))
+                            store.dispatch(.adLoad(.interstitial))
+                        }
+                        .onDisappear{
+                            store.dispatch(.adDisappear(.native))
                         }
                         .alert(title: root.message, isPresent: $store.state.root.isAlert)
                         .sheet(isPresented: $store.state.root.showShare) {
@@ -42,6 +47,8 @@ struct ContentView: View {
                     TabView()
                         .onAppear {
                             store.dispatch(.loE(.tabShow))
+                            store.dispatch(.adLoad(.native, .tab))
+                            store.dispatch(.adLoad(.interstitial))
                         }
                         .onDisappear {
                             store.dispatch(.loE(.homeShow))
@@ -59,6 +66,8 @@ struct ContentView: View {
                     PrivacyView()
                         .onDisappear {
                             store.dispatch(.loE(.homeShow))
+                            store.dispatch(.adLoad(.native))
+                            store.dispatch(.adLoad(.interstitial))
                         }
                 }
                 
@@ -66,6 +75,8 @@ struct ContentView: View {
                     TermsView()
                         .onDisappear {
                             store.dispatch(.loE(.homeShow))
+                            store.dispatch(.adLoad(.native))
+                            store.dispatch(.adLoad(.interstitial))
                         }
                 }
                 
@@ -77,6 +88,8 @@ struct ContentView: View {
                     CleanView()
                         .onDisappear {
                             store.dispatch(.loE(.homeShow))
+                            store.dispatch(.adLoad(.native))
+                            store.dispatch(.adLoad(.interstitial))
                         }
                 }
                
@@ -85,9 +98,19 @@ struct ContentView: View {
             .background(Color(hex: 0x000100).ignoresSafeArea(.all))
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            AppEnterbackground = false
+            store.dispatch(.dismiss)
             store.dispatch(.launching)
             store.dispatch(.loE(.openHot))
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification), perform: { _ in
+            AppEnterbackground = true
+        })
+        .onReceive(NotificationCenter.default.publisher(for: .nativeAdLoadCompletion), perform: { ad in
+            if let ad = ad.object as? NativeViewModel {
+                store.dispatch(.adModel(ad))
+            }
+        })
     }
 }
 

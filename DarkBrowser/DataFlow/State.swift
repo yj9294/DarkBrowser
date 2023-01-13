@@ -12,6 +12,7 @@ struct AppState {
     var launch = LaunchState()
     var home = HomeState()
     var tab = TabState()
+    var ad = GAdMoble()
 }
 
 extension AppState {
@@ -28,6 +29,8 @@ extension AppState {
         
         var message: String = ""
         var isAlert: Bool = false
+        
+        var adModel: NativeViewModel = .None
     }
 }
 
@@ -116,6 +119,40 @@ extension AppState {
             
             case loading = "k_21"
             case loaded = "ll_21"
+        }
+    }
+}
+
+extension AppState {
+    struct GAdMoble{
+
+        @UserDefault(key: "state.ad.config")
+        var config: GADConfigModel?
+       
+        @UserDefault(key: "state.ad.limit")
+        var limit: GADLimitModel?
+        
+        var impressionDate:[GADPosition.Position: Date] = [:]
+        
+        let ads:[GADLoadModel] = GADPosition.allCases.map { p in
+            GADLoadModel(position: p)
+        }.filter { m in
+            m.position != .all
+        }
+        
+        func isLoaded(_ position: GADPosition) -> Bool {
+            return self.ads.filter {
+                $0.position == position
+            }.first?.isLoaded == true
+        }
+
+        func isLimited(in store: Store) -> Bool {
+            if limit?.date.isToday == true {
+                if (store.state.ad.limit?.showTimes ?? 0) >= (store.state.ad.config?.showTimes ?? 0) || (store.state.ad.limit?.clickTimes ?? 0) >= (store.state.ad.config?.clickTimes ?? 0) {
+                    return true
+                }
+            }
+            return false
         }
     }
 }

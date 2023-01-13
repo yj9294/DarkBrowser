@@ -14,6 +14,10 @@ struct TabView: View {
         store.state.home
     }
     
+    var root: AppState.RootState {
+        store.state.root
+    }
+    
     let colums = [GridItem(.flexible(minimum: 100, maximum: 200), spacing: 12), GridItem(.flexible(minimum: 100, maximum: 200), spacing: 12)]
 
     var body: some View {
@@ -75,6 +79,11 @@ struct TabView: View {
             }
             Spacer()
             
+            VStack{
+                NativeView(model: root.adModel).frame(height: 76)
+            }
+            .padding(.horizontal, 16)
+            
             // 底部
             ZStack{
                 HStack{
@@ -108,6 +117,10 @@ extension TabView {
         store.dispatch(.webItemSelect(item))
         store.dispatch(.homeReloadWebView)
         store.dispatch(.tabShow(false))
+        
+        store.dispatch(.adDisappear(.native))
+        store.dispatch(.adLoad(.native, .home))
+        store.dispatch(.adLoad(.interstitial))
     }
     
     func deleteAction(_ item: WebItem) {
@@ -120,10 +133,18 @@ extension TabView {
         store.dispatch(.webItemNew)
         store.dispatch(.homeReloadWebView)
         store.dispatch(.tabShow(false))
+        
+        store.dispatch(.adDisappear(.native))
+        store.dispatch(.adLoad(.native, .home))
+        store.dispatch(.adLoad(.interstitial))
     }
     
     func backAction() {
         store.dispatch(.tabShow(false))
+        
+        store.dispatch(.adDisappear(.native))
+        store.dispatch(.adLoad(.native, .home))
+        store.dispatch(.adLoad(.interstitial))
     }
 }
 

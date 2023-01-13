@@ -124,11 +124,13 @@ extension SettingView {
     func termsAction() {
         store.dispatch(.settingShow(false))
         store.dispatch(.termsShow(true))
+        store.dispatch(.adDisappear(.native))
     }
     
     func privacyAction() {
         store.dispatch(.settingShow(false))
         store.dispatch(.privacyShow(true))
+        store.dispatch(.adDisappear(.native))
     }
 }
 

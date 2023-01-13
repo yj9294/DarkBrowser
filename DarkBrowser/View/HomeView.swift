@@ -72,6 +72,14 @@ struct HomeView: View {
                     })
                     .padding(.vertical, 10)
                     Spacer()
+                    VStack{
+                        if !root.showTab {
+                            NativeView(model: root.adModel).frame(height: 76)
+                        } else {
+                            Image("ad_placeholder")
+                        }
+                    }
+                    .padding(.horizontal, 16)
                 }
             } else if !root.showTab {
                 WebView(webView: home.item.webView)
@@ -152,6 +160,7 @@ extension HomeView {
     
     func tabAction() {
         store.dispatch(.hideKeyboard)
+        store.dispatch(.adDisappear(.native))
         store.dispatch(.tabShow(true))
     }
     

@@ -18,6 +18,7 @@ class Store: ObservableObject {
     }
     
     private func commonInit() {
+        dispatch(.adRequestConfig)
         dispatch(.launching)
         dispatch(.homeReloadWebView)
         
@@ -127,6 +128,33 @@ extension Store{
             appCommand = FirebasePropertyCommand(property, value)
         case .loE(let event, let params):
             appCommand = FirebaseEvnetCommand(event, params)
+            
+        case .adRequestConfig:
+            appCommand = GADRequestConfigCommand()
+        case .adUpdateConfig(let config):
+            appState.ad.config = config
+        case .adUpdateLimit(let state):
+            appCommand = GADLimitedCommand(state)
+        case .adAppear(let position):
+            appCommand = GADAppearCommand(position)
+        case .adDisappear(let position):
+            appCommand = GADDisappearCommand(position)
+        case .adClean(let position):
+            appCommand = GADCleanCommand(position)
+        
+        case .adLoad(let position, let p):
+            appCommand = GADLoadCommand(position, p)
+        case .adShow(let position, let p, let completion):
+            appCommand = GADShowCommand(position, p, completion)
+            
+        case .adNativeImpressionDate(let p):
+            appState.ad.impressionDate[p] = Date()
+        case .adModel(let model):
+            appState.root.adModel = model
+        case .clean:
+            appCommand = CleanCommand()
+        case .dismiss:
+            appCommand = DismissCommand()
         }
         return (appState, appCommand)
     }

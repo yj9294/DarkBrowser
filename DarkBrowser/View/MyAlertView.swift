@@ -57,17 +57,7 @@ extension MyAlertView {
     func confirmAction() {
         store.dispatch(.myAlertShow(false))
         store.dispatch(.cleanShow(true))
-        Task{
-            if !Task.isCancelled {
-                try await Task.sleep(nanoseconds: 2_000_000_000)
-                store.dispatch(.loE(.cleanAnimation))
-                store.dispatch(.cleanShow(false))
-                store.dispatch(.alert("Clean successfully."))
-                store.dispatch(.loE(.cleanAlert))
-                store.dispatch(.webItemClean)
-                store.dispatch(.homeReloadWebView)
-            }
-        }
+        store.dispatch(.clean)
     }
 }
 

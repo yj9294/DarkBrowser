@@ -14,6 +14,13 @@
 		C71578F0294C1FB000C5487F /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71578EF294C1FB000C5487F /* LaunchView.swift */; };
 		C71578F2294C1FB900C5487F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71578F1294C1FB900C5487F /* HomeView.swift */; };
 		C71578F4294C230900C5487F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71578F3294C230900C5487F /* Helper.swift */; };
+		C719DD562955751B0003C7E7 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C719DD552955751B0003C7E7 /* GoogleMobileAds */; };
+		C719DD5829557A790003C7E7 /* GADCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719DD5729557A790003C7E7 /* GADCommand.swift */; };
+		C719DD5A29557DE00003C7E7 /* GADConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719DD5929557DE00003C7E7 /* GADConfigModel.swift */; };
+		C719DD5C29557DF40003C7E7 /* GADLoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719DD5B29557DF40003C7E7 /* GADLoadModel.swift */; };
+		C719DD5E29557E160003C7E7 /* GADModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719DD5D29557E160003C7E7 /* GADModel.swift */; };
+		C719DD6029557E390003C7E7 /* NativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719DD5F29557E390003C7E7 /* NativeView.swift */; };
+		C719DD62295580D70003C7E7 /* admob.json in Resources */ = {isa = PBXBuildFile; fileRef = C719DD61295580D70003C7E7 /* admob.json */; };
 		C722A81F294C0F7C00BFBC46 /* DarkBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722A81E294C0F7C00BFBC46 /* DarkBrowserApp.swift */; };
 		C722A821294C0F7C00BFBC46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722A820294C0F7C00BFBC46 /* ContentView.swift */; };
 		C722A823294C0F7E00BFBC46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C722A822294C0F7E00BFBC46 /* Assets.xcassets */; };
@@ -45,6 +52,12 @@
 		C71578EF294C1FB000C5487F /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		C71578F1294C1FB900C5487F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C71578F3294C230900C5487F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C719DD5729557A790003C7E7 /* GADCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADCommand.swift; sourceTree = "<group>"; };
+		C719DD5929557DE00003C7E7 /* GADConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADConfigModel.swift; sourceTree = "<group>"; };
+		C719DD5B29557DF40003C7E7 /* GADLoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADLoadModel.swift; sourceTree = "<group>"; };
+		C719DD5D29557E160003C7E7 /* GADModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADModel.swift; sourceTree = "<group>"; };
+		C719DD5F29557E390003C7E7 /* NativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeView.swift; sourceTree = "<group>"; };
+		C719DD61295580D70003C7E7 /* admob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = admob.json; sourceTree = "<group>"; };
 		C722A81B294C0F7C00BFBC46 /* DarkBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C722A81E294C0F7C00BFBC46 /* DarkBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkBrowserApp.swift; sourceTree = "<group>"; };
 		C722A820294C0F7C00BFBC46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +88,7 @@
 				C7EC0327295188220074DD55 /* FacebookBasics in Frameworks */,
 				C7EC031E295187650074DD55 /* FirebaseAnalytics in Frameworks */,
 				C7EC0320295187650074DD55 /* FirebaseCrashlytics in Frameworks */,
+				C719DD562955751B0003C7E7 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +104,10 @@
 				C71578EC294C131700C5487F /* Action.swift */,
 				C7EC03062950450A0074DD55 /* WebItem.swift */,
 				C7EC031A295186F20074DD55 /* FirebaseCommand.swift */,
+				C719DD5729557A790003C7E7 /* GADCommand.swift */,
+				C719DD5929557DE00003C7E7 /* GADConfigModel.swift */,
+				C719DD5B29557DF40003C7E7 /* GADLoadModel.swift */,
+				C719DD5D29557E160003C7E7 /* GADModel.swift */,
 			);
 			path = DataFlow;
 			sourceTree = "<group>";
@@ -107,6 +125,7 @@
 				C7EC031429516B7C0074DD55 /* TermsView.swift */,
 				C7EC031629516D4F0074DD55 /* MyAlertView.swift */,
 				C7EC031829517D6E0074DD55 /* CleanView.swift */,
+				C719DD5F29557E390003C7E7 /* NativeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,6 +156,7 @@
 				C722A820294C0F7C00BFBC46 /* ContentView.swift */,
 				C7EC032B295299FE0074DD55 /* GoogleService-Info.plist */,
 				C71578F3294C230900C5487F /* Helper.swift */,
+				C719DD61295580D70003C7E7 /* admob.json */,
 				C722A822294C0F7E00BFBC46 /* Assets.xcassets */,
 				C722A824294C0F7E00BFBC46 /* Preview Content */,
 			);
@@ -174,6 +194,7 @@
 				C7EC0324295188220074DD55 /* FacebookAEM */,
 				C7EC0326295188220074DD55 /* FacebookBasics */,
 				C7EC0328295188220074DD55 /* FacebookCore */,
+				C719DD552955751B0003C7E7 /* GoogleMobileAds */,
 			);
 			productName = DarkBrowser;
 			productReference = C722A81B294C0F7C00BFBC46 /* DarkBrowser.app */;
@@ -206,6 +227,7 @@
 			packageReferences = (
 				C7EC031C295187650074DD55 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C7EC0323295188220074DD55 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				C719DD542955751B0003C7E7 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */,
 			);
 			productRefGroup = C722A81C294C0F7C00BFBC46 /* Products */;
 			projectDirPath = "";
@@ -222,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C722A826294C0F7E00BFBC46 /* Preview Assets.xcassets in Resources */,
+				C719DD62295580D70003C7E7 /* admob.json in Resources */,
 				C722A823294C0F7E00BFBC46 /* Assets.xcassets in Resources */,
 				C7EC032C295299FE0074DD55 /* GoogleService-Info.plist in Resources */,
 			);
@@ -238,9 +261,13 @@
 				C71578E7294C121E00C5487F /* Store.swift in Sources */,
 				C7EC031729516D4F0074DD55 /* MyAlertView.swift in Sources */,
 				C71578ED294C131700C5487F /* Action.swift in Sources */,
+				C719DD5A29557DE00003C7E7 /* GADConfigModel.swift in Sources */,
+				C719DD6029557E390003C7E7 /* NativeView.swift in Sources */,
 				C722A821294C0F7C00BFBC46 /* ContentView.swift in Sources */,
 				C71578F0294C1FB000C5487F /* LaunchView.swift in Sources */,
+				C719DD5829557A790003C7E7 /* GADCommand.swift in Sources */,
 				C722A81F294C0F7C00BFBC46 /* DarkBrowserApp.swift in Sources */,
+				C719DD5E29557E160003C7E7 /* GADModel.swift in Sources */,
 				C71578F4294C230900C5487F /* Helper.swift in Sources */,
 				C71578F2294C1FB900C5487F /* HomeView.swift in Sources */,
 				C71578EB294C12F300C5487F /* State.swift in Sources */,
@@ -248,6 +275,7 @@
 				C71578E9294C127E00C5487F /* Command.swift in Sources */,
 				C7EC031B295186F20074DD55 /* FirebaseCommand.swift in Sources */,
 				C7EC0311295165340074DD55 /* ShareView.swift in Sources */,
+				C719DD5C29557DF40003C7E7 /* GADLoadModel.swift in Sources */,
 				C7EC03072950450A0074DD55 /* WebItem.swift in Sources */,
 				C7EC031929517D6E0074DD55 /* CleanView.swift in Sources */,
 				C7EC030D295051440074DD55 /* TabView.swift in Sources */,
@@ -469,6 +497,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C719DD542955751B0003C7E7 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanghits/GoogleMobileAds";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		C7EC031C295187650074DD55 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -488,6 +524,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C719DD552955751B0003C7E7 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C719DD542955751B0003C7E7 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */;
+			productName = GoogleMobileAds;
+		};
 		C7EC031D295187650074DD55 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C7EC031C295187650074DD55 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
